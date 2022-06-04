@@ -37,7 +37,7 @@ def run():
         try:
             _last_ip = load_last_ip()
             _ip = get_ip().strip()
-            print(_ip, _last_ip)
+            logging.info(_ip, _last_ip)
             if _ip != _last_ip:
                 send_mail(_ip)
 
@@ -46,7 +46,7 @@ def run():
             save_ip(_ip)
 
         except Exception as e:
-            print(e)
+            logging.error(e)
         time.sleep(10 * 60)
 
 

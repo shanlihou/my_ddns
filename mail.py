@@ -24,7 +24,6 @@ class Mail(object):
         msg["to"] = email_to
 
         ret = smtp.sendmail(self.email, email_to, msg.as_string())
-        print(ret)
         smtp.quit()
 
 
