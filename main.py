@@ -37,7 +37,7 @@ def run():
         try:
             _last_ip = load_last_ip()
             _ip = get_ip().strip()
-            logging.info(_ip, _last_ip)
+            logging.info('new ip:{}, old ip:{}'.format(_ip, _last_ip))
             if _ip != _last_ip:
                 send_mail(_ip)
 
