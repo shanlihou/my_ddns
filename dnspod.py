@@ -1,4 +1,3 @@
-from tkinter.dnd import DndHandler
 import requests
 import json
 import conf
