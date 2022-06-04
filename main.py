@@ -41,8 +41,8 @@ def run():
             if _ip != _last_ip:
                 send_mail(_ip)
 
-            dh = dnspod.DnspodHelper()
-            dh.update_ddns(_ip)
+                dh = dnspod.DnspodHelper()
+                dh.update_ddns(_ip)
             save_ip(_ip)
 
         except Exception as e:
